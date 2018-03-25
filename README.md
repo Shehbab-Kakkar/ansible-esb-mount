@@ -29,7 +29,7 @@ There are no external dependencies
   become: yes
   become_method: sudo
   roles:
-   - esb.mount
+   - ansible-esb-mount
 
   vars:
     file_system: ext4
