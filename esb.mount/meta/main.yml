@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Evgenios Soroka
+  description: Ansible role for mounting ESB volumes on Amazon EC2 instances.
+  license: MIT
+  min_ansible_version: 2.3
+  platforms:
+  - name: Ubuntu
+    versions:
+    - xenial
+  galaxy_tags:
+  - Amazon
+  - ec2
+  - system
+  - ESB
+dependencies: []

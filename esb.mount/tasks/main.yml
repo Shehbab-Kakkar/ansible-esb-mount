@@ -1,0 +1,17 @@
+- name: Create filesystem
+  filesystem:
+    fstype: "{{ file_system }}"
+    dev: "{{ device_name }}"
+
+- name: Mount device
+  mount:
+    path: "{{ mount_point }}"
+    src: "{{ device_name }}"
+    fstype: "{{ file_system }}"
+    state: mounted
+
+- name: Chown created partition
+  file: 
+    path: "{{ mount_point }}"
+    owner: "{{ user }}"
+    group: "{{ user }}"

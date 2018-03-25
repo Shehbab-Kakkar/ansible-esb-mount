@@ -1,0 +1,13 @@
+ - hosts: ec2
+   gather_facts: no
+   remote_user: ubuntu
+   become: yes
+   become_method: sudo
+   roles:
+    - esb.mount
+    
+   vars:
+    file_system: ext4
+    device_name: /dev/xvdb
+    mount_point: /data
+    user: ubuntu
